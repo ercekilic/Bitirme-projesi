@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.5"
+            android:orientation="vertical"/>
+
+        <Button
+            android:id="@+id/button_siparisVer"
+            android:layout_width="0dp"
+            android:layout_height="155dp"
+            android:text="Kurye Alsın"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_goneMarginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@id/guideline_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/button_Profil"
+            app:strokeColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="155dp"
+            android:text="Kuryelik Yap"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button_siparisVer" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="183dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="50dp"
+            android:text="BiKurye'ye HoşGeldiniz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.094"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_paketDurumu"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Paketimin Durumu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_siparisVer" />
+
+        <Button
+            android:id="@+id/button_Profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profilim"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="Görevlerim"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_paketDurumu" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

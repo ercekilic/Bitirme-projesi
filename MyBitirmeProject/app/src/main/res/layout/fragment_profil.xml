@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="rating"
+            type="Integer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".profil.ProfilFragment">
+
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="131dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:text="Profilim"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.057"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_name1"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="ISIM:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView_name2"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_name1"
+            app:layout_constraintTop_toTopOf="@+id/textView_name1" />
+
+        <TextView
+            android:id="@+id/textView_phoneNumber1"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Telefon NO:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_name1" />
+
+        <TextView
+            android:id="@+id/textView_phoneNumber2"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView_phoneNumber1"
+            app:layout_constraintTop_toTopOf="@+id/textView_phoneNumber1" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center|left"
+            android:text="Puanım:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_phoneNumber1"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/im_first"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/textView23"
+            app:layout_constraintTop_toTopOf="@id/textView23"
+            android:src="@{rating>0 ? @drawable/sariyildiz : @drawable/yildiz}"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/im_two"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@id/im_first"
+            app:layout_constraintTop_toTopOf="@id/textView23"
+            android:src="@{rating>1 ? @drawable/sariyildiz : @drawable/yildiz}"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/im_three"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@id/im_two"
+            app:layout_constraintTop_toTopOf="@id/textView23"
+            android:src="@{rating>2 ? @drawable/sariyildiz : @drawable/yildiz}"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/im_four"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@id/im_three"
+            app:layout_constraintTop_toTopOf="@id/textView23"
+            android:src="@{rating>3 ? @drawable/sariyildiz : @drawable/yildiz}"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/im_last"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@id/im_four"
+            app:layout_constraintTop_toTopOf="@id/textView23"
+            android:src="@{rating>4 ? @drawable/sariyildiz : @drawable/yildiz}"
+            android:visibility="gone"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

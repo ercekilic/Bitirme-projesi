@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.mybitirmeproject.register.RegisterFragment"
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mybitirmeproject.login.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.example.mybitirmeproject.mainscreen.MainScreenFragment"
+        android:label="MainScreenFragment" >
+        <action
+            android:id="@+id/action_mainScreenFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_getCourierFragment"
+            app:destination="@id/getCourierFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_beCourierFragment"
+            app:destination="@id/beCourierFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_cargoStatusFragment"
+            app:destination="@id/cargoStatusFragment" />
+        <action
+            android:id="@+id/action_mainScreenFragment_to_myJobsFragment"
+            app:destination="@id/myJobsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.example.mybitirmeproject.profil.ProfilFragment"
+        android:label="ProfilFragment" />
+    <fragment
+        android:id="@+id/getCourierFragment"
+        android:name="com.example.mybitirmeproject.getcourier.GetCourierFragment"
+        android:label="fragment_get_courier"
+        tools:layout="@layout/fragment_get_courier" />
+    <fragment
+        android:id="@+id/beCourierFragment"
+        android:name="com.example.mybitirmeproject.becourier.BeCourierFragment"
+        android:label="fragment_be_courier"
+        tools:layout="@layout/fragment_be_courier" >
+        <action
+            android:id="@+id/action_beCourierFragment_to_orderInfoFragment"
+            app:destination="@id/orderInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cargoStatusFragment"
+        android:name="com.example.mybitirmeproject.cargostatus.CargoStatusFragment"
+        android:label="fragment_cargo_status"
+        tools:layout="@layout/fragment_cargo_status" >
+        <action
+            android:id="@+id/action_cargoStatusFragment_to_kargomNerede"
+            app:destination="@id/kargomNerede" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderInfoFragment"
+        android:name="com.example.mybitirmeproject.orderinfo.OrderInfoFragment"
+        android:label="fragment_order_info"
+        tools:layout="@layout/fragment_order_info">
+        <argument
+            android:name="order"
+            app:argType="com.example.mybitirmeproject.data.Order"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/myJobsFragment"
+        android:name="com.example.mybitirmeproject.myJobs.myJobsFragment"
+        android:label="fragment_my_jobs"
+        tools:layout="@layout/fragment_my_jobs" >
+        <action
+            android:id="@+id/action_myJobsFragment_to_kuryeRotasyon"
+            app:destination="@id/kuryeRotasyon" />
+    </fragment>
+    <activity
+        android:id="@+id/kargomNerede"
+        android:name="com.example.mybitirmeproject.kargomnerede.KargomNerede"
+        android:label="activity_kargom_nerede"
+        tools:layout="@layout/activity_kargom_nerede"
+
+        >
+    <argument
+        android:name="courierId"
+        app:argType="string"
+        />
+    </activity>
+    <fragment
+        android:id="@+id/kuryeRotasyon"
+        android:name="com.example.mybitirmeproject.kargomnerede.MapsFragment"
+        android:label="KuryeRotasyon" >
+        <argument
+            android:name="latitude"
+            app:argType="java.lang.Double"
+            />
+        <argument
+            android:name="longitude"
+            app:argType="java.lang.Double"
+            />
+    </fragment>
+
+</navigation>
